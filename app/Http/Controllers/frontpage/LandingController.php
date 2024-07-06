@@ -36,7 +36,7 @@ class LandingController extends Controller
 
         $recommendedPlants = Plant::where('suhu_min', '<=', $temperatureMax)
             ->where('suhu_max', '>=', $temperatureMin)
-            ->get();
+            ->paginate(4);
 
         $allPlants = Plant::paginate(4);
 

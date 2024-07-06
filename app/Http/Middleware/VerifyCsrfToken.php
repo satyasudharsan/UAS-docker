@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        'login', // tambahkan rute login di sini
+        // tambahkan rute lain jika diperlukan
     ];
 }
